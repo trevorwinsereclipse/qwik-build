@@ -27,8 +27,8 @@ jobs:
 
     - name: Regenerate Pages source
       run: |
-        npm create qwik@latest basic site
-        npm install --package-lock-only --prefix site
+        yarn create qwik basic site
+        yarn install
         git init --initial-branch ci
         git add site
         git commit --allow-empty-message --message= #$GITHUB_JOB
